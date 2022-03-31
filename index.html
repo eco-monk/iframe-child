@@ -5,7 +5,7 @@ Hello i-frame
        
   function sendMessage() {
        console.log("iframe - send triggered")
-       window.parent.postMessage("iframe - child message", '*');
+       window.parent.postMessage("child message", '*');
    }
    
    window.addEventListener('message', function (e) {
