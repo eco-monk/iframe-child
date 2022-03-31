@@ -2,7 +2,10 @@
 Hello i-frame
   <script>
        
-   window.parent.postMessage(message, 'Iframe message');
+  function sendMessage() {
+       console.log("send triggered")
+       window.parent.postMessage("child message", '*');
+   }
    
    window.addEventListener('message', function (e) {
       // Get the sent data
