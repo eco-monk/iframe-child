@@ -1,16 +1,17 @@
 <html>
 Hello i-frame
+  <button onclick="sendMessage()">send</button>
   <script>
        
   function sendMessage() {
-       console.log("send triggered")
-       window.parent.postMessage("child message", '*');
+       console.log("iframe - send triggered")
+       window.parent.postMessage("iframe - child message", '*');
    }
    
    window.addEventListener('message', function (e) {
       // Get the sent data
       const data = e.data;
-      console.log("from parent", data);
+      console.log("iframe - from parent", data);
   });
         
   </script>
